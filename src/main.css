@@ -1,0 +1,18 @@
+
+
+  .accent-text {
+    color: #A8DADC;
+  }
+  
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+::-webkit-scrollbar-track {
+    background: #E63946;
+  }
+   
+::-webkit-scrollbar-thumb {
+    background: #A8DADC; 
+  }
