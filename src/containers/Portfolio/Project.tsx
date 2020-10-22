@@ -34,7 +34,9 @@ export function Project(props) {
           <ProjectContent>
             <div>
               <ProjectTitle>{props.title}</ProjectTitle>
-              <ProjectDescription>{props.description}</ProjectDescription>
+              <ProjectDescription
+                dangerouslySetInnerHTML={{ __html: props.description }}
+              ></ProjectDescription>
             </div>
             <ProjectTechnologies>
               {props.icons.map((icon, i) => (

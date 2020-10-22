@@ -1,6 +1,6 @@
 import { Hexagon } from '../../components/Hexagon'
 import React, { useEffect } from 'react'
-import { DiGit, DiJavascript, DiNodejsSmall, DiPostgresql, DiReact } from 'react-icons/di'
+import { DiGit, DiJavascript1, DiNodejsSmall, DiPostgresql, DiReact } from 'react-icons/di'
 import styled from 'styled-components'
 import useMedia from 'use-media'
 import { device } from '../../devices'
@@ -21,12 +21,12 @@ export function HexagonTechs() {
   }, [controls, inView])
 
   const desktopTechMatrix = [
-    [<DiJavascript key="javascript" />, <DiNodejsSmall key="node" />],
+    [<DiJavascript1 key="javascript" />, <DiNodejsSmall key="node" />],
     [<DiReact key="react" />, <DiGit key="git" />, <DiPostgresql key="postgres" />]
   ]
 
   const mobileTechMatrix = [
-    [<DiJavascript key="javascript" />, <DiNodejsSmall key="node" />],
+    [<DiJavascript1 key="javascript" />, <DiNodejsSmall key="node" />],
     [<DiReact key="react" />],
     [<DiGit key="git" />, <DiPostgresql key="postgres" />]
   ]

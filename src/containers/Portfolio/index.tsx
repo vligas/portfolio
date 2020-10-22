@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Project } from './Project'
 import seamImage from '../../../public/images/Seam-image.png'
 import itsImage from '../../../public/images/Its-Image2.png'
+import electronImage from '../../../public/images/Electron-image.png'
 import {
   SiElectron,
   SiFirebase,
@@ -19,22 +20,29 @@ export function Portfolio() {
         color="#6b68ff"
         image={itsImage}
         title="Delivery App"
-        description="I was the unique frontend developer. responsible of making up the interface and funcionality after the one who preceded me leaved the project in the early stages."
-        icons={[<SiFirebase />, <SiReact />, <SiRedux />]}
+        description="<p>I was in charge of front-end development, responsible of implenting the design of the interface and making its functionality, 
+        after a previous developer left the project in early stages.</p><p>Additionally, I setup push notifications using Firebase and an orchestrator using Node.</p>"
+        icons={[<SiFirebase key="firebase" />, <SiReact key="react" />, <SiRedux key="redux" />]}
       />
       <Project
         color="#7d7aff"
         image={seamImage}
         title="ERP Clone"
-        description="I was the unique frontend developer. responsible of making up the interface and funcionality after the one who preceded me leaved the project in the early stages."
-        icons={[<SiNodeDotJs />, <SiReact />, <SiRedux />, <SiMicrosoftsqlserver />]}
+        description="<p>I worked as a full-stack developer in the redesign of an ERP system, while also adding new features to the system.</p>
+        <p>I added new tables to the database to support the new features, and created an entirely new back-end. For the front-end I worked in the making of a new design and implementation of all features.</p>"
+        icons={[
+          <SiNodeDotJs key="node" />,
+          <SiReact key="react" />,
+          <SiRedux key="redux" />,
+          <SiMicrosoftsqlserver key="mssql" />
+        ]}
       />
       <Project
         color="#9694ff"
-        image={seamImage}
+        image={electronImage}
         title="Mechanical Workshop App"
-        description="I was the unique frontend developer. responsible of making up the interface and funcionality after the one who preceded me leaved the project in the early stages."
-        icons={[<SiReact />, <SiRedux />, <SiElectron />]}
+        description="<p>I made a desktop client application that connects to a management system and was able to control and do follow-up of the activities of mechanical workshops.</p>"
+        icons={[<SiReact key="react" />, <SiRedux key="redux" />, <SiElectron key="electron" />]}
       />
     </PortfolioContainer>
   )

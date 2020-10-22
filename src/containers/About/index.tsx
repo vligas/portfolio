@@ -67,14 +67,15 @@ export function About() {
             }}
           >
             <p>
-              I’am a enthusiast fast learner always willing to use new technologies and grow
-              professionally. I enjoy programming and I have lucky that my actual passion is my job
-              ❤️.
+              I’am a full-stack developer based in Venezuela. I studied Computer Science. I really
+              enjoy programming and I am lucky that my job is my actual passion ❤️
             </p>
             <p>
-              In the past I have used Python and Django in different projects but actually I’am
-              focused in React, Typescript and Node backends with different frameworks (Koa, Nestjs,
-              Express), with relational databases like (PostgreSQL and SQL Server).
+              I’m a fast learner, and enthusiastic to use new technologies and grow professionally.
+            </p>
+            <p>
+              In the past I have worked with Python and Django in different projects, but right now
+              I am focused in Typescript, React and Node backends with different frameworks.
             </p>
           </AboutText>
         </Grid>
@@ -155,7 +156,7 @@ export const AboutContainer = styled.div`
 export const AboutText = styled(motion.div)`
   padding-right: 20px;
   margin-bottom: 50px;
-  font-size: 1em;
+  font-size: 0.9em;
   flex: 1;
 
   @media ${device.xs} {

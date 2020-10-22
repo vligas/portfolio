@@ -9,8 +9,10 @@ import { motion } from 'framer-motion'
 
 export function Contact(props) {
   const isSm = useMedia(device.sm)
+  const isMd = useMedia(device.md)
   const isLg = useMedia(device.lg)
-  const dotNumber = isLg ? 30 : isSm ? 15 : 1
+  const isXl = useMedia(device.xl)
+  const dotNumber = isXl ? 40 : isLg ? 25 : isMd ? 20 : isSm ? 10 : 1
 
   const [controls, ref] = useVisibleAnimation()
 
@@ -23,17 +25,17 @@ export function Contact(props) {
             <SiGmail color="red" />
             <span>vligin2@gmail.com</span>
           </ContactListItem>
-          <ContactListItem href="https://t.me/vligas" target="_blank">
-            <SiTelegram color="#0088CC" />
-            <span>t.me/vligas</span>
-          </ContactListItem>
           <ContactListItem>
             <CgPhone color="grey" />
             <span>+58 412 0418010</span>
           </ContactListItem>
+          <ContactListItem href="https://t.me/vligas" target="_blank">
+            <SiTelegram color="#0088CC" />
+            <span>t.me/vligas</span>
+          </ContactListItem>
           <ContactListItem href="https://www.linkedin.com/in/victorligas" target="_blank">
             <SiLinkedin color="#0e76a8" />
-            <span>linkedin.com/in/victorligas/</span>
+            <span>/in/victorligas</span>
           </ContactListItem>
           <ContactListItem href="https://github.com/vligas" target="_blank">
             <SiGithub />
@@ -61,7 +63,7 @@ export function Contact(props) {
                 custom={i}
                 // transition={{ duration: 2 }}
                 variants={{
-                  visible: (custom) => ({ scale: 1, transition: { delay: 0.1 * custom } }),
+                  visible: (custom) => ({ scale: 1, transition: { delay: 0.02 * custom } }),
                   hidden: { scale: 0 }
                 }}
               />
