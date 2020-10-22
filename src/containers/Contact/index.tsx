@@ -116,7 +116,7 @@ export const ContactTitle = styled.h2`
     content: '';
     width: 100%;
     height: 10px;
-    background-color: ${(props) => props.theme.color.accent};
+    background-color: ${(props) => props.theme.color.secondary};
     position: absolute;
     left: 0;
     bottom: -10px;

@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import { SiFirebase, SiReact, SiRedux } from 'react-icons/si'
 import useMedia from 'use-media'
 import { device } from '../../devices'
@@ -10,6 +10,7 @@ import { useVisibleAnimation } from '../../utils/useVisibleAnimation'
 export function Project(props) {
   const isMobile = !useMedia(device.sm)
   const [controls, ref] = useVisibleAnimation()
+  const theme = useTheme()
 
   return (
     <motion.div
@@ -42,6 +43,7 @@ export function Project(props) {
               {props.icons.map((icon, i) => (
                 <ProjectTechnolyIcon key={i}>{icon}</ProjectTechnolyIcon>
               ))}
+              <ProjectPreview color={theme.color.accent}>{props.preview}</ProjectPreview>
             </ProjectTechnologies>
           </ProjectContent>
         </Grid>
@@ -109,4 +111,8 @@ const ProjectTechnologies = styled.span`
   /* text-align: right; */
   /* display: flex; */
   /* align-items: center; */
+`
+
+const ProjectPreview = styled.span`
+  float: right;
 `
